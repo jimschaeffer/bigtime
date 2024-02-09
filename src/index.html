@@ -1,349 +1,413 @@
 ---
-title: 'Pixel Perfect Websites'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
-permalink: '/'
+title: "Pixel Perfect Websites"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
 eleventyNavigation:
   key: Home
   order: 100
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link rel="stylesheet" href="/assets/css/critical.css" />
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %}
 
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
-{% endblock %}
+<!--We needed to pull from Google Fonts CDN to load in the cursive font. -->
+<!--Download the fonts from https://gwfh.mranftl.com/fonts and follow the steps to host it locally and remove these CDN links-->
 
-{% block body %}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap"
+  rel="stylesheet"
+/>
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Hero                       -->
+<!-- ============================================ -->
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17" />
-                    Get in Touch
-                </a>
-            </div>
-        </div>
-
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77" />
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+<section id="hero-929">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Big Time Lawn<br /></h2>
+      <h2 class="cs-title-2">Save Your Time.<br />Save Your Lawn.</h2>
+      <div class="cs-flex">
+        <div class="cs-content-group"></div>
+        <div class="cs-hours-group">
+          <div class="cs-hours">
+            <span class="cs-header">Birmingham, Alabama</span>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+              Big Time Lawn provides top-notch lawn care services in the
+              Birmingham, Hoover, Vestavia, Irondale, Fultondale, Forestdale,
+              Homewood, Pelham, Alabaster, Jefferson County, and Greater
+              Birmingham Areas.
             </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
-                </li>
-            </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+          </div>
+          <a href="" class="cs-button-solid">Request Your Free Quote</a>
         </div>
-    </section>
+      </div>
+      <!--We need this wrapper div so we can place the cs-tagline around the cs-picture image. We can only place images inside picture tags so the cs-tagline can't go in there. hence we HAVE to make a div wrapper so they can be placed together-->
+      <div class="cs-picture-group">
+        <span class="cs-tagline">Flexible Pricing!</span>
+        <!-- Lawn Mower Picture-->
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="assets/images/mower-m.png"
+          />
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="assets/images/mower.png" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="assets/images/mower.png"
+            alt="Lawn Mower"
+            width="576"
+            height="598"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="assets/images/grass-m.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="assets/images/grass.jpg" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="assets/images/grass.jpg"
+      alt="Lowing Landscape"
+      width="1920"
+      height="804"
+    />
+  </picture>
+</section>
 
-    {% include 'components/cta.html' %}
-{% endblock %}
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-944">
+  <div class="cs-container">
+    <!-- Left Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Lawn Maintenance</span>
+      <h2 class="cs-title">Transform Your Lawn with Expert Care</h2>
+      <p class="cs-text">
+        At <strong>Big Time Lawn</strong>, we specialize in providing top-notch
+        lawn care services that go beyond maintenance. Our primary services
+        mowing, precise edging, thorough weed eating, blowing, and garden bed
+        weed control. Trust us to make your lawn the envy of the neighborhood.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="read more about our services"
+        href=""
+        >View All Services</a
+      >
+    </div>
+    <!-- Right Image Section -->
+    <div class="cs-picture-group">
+      <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="assets/images/video.webp" />
+        <source media="(min-width: 601px)" srcset="assets/images/video.webp" />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/video.webp"
+          alt="Mowing Video"
+          width="630"
+          height="380"
+          aria-hidden="true"
+        />
+      </picture>
+      <a class="cs-play" href="">
+        <img
+          class="cs-play-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-white.svg"
+          alt="play link"
+          width="24"
+          height="24"
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+  </div>
+  <ul class="cs-card-group">
+    <li class="cs-item">
+      <img
+        class="cs-icon"
+        loading="lazy"
+        decoding="async"
+        src="assets/svgs/grass.svg"
+        alt="Mowing"
+        width="40"
+        height="40"
+      />
+      <h3 class="cs-h3">Mowing</h3>
+      <p class="cs-item-text">
+        Our mowing service is executed to deliver a lush, well-manicured,
+        healthy green lawn that enhances curb appeal.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/lawn-1.webp"
+          alt="Mowing"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+    <li class="cs-item">
+      <img
+        class="cs-icon"
+        loading="lazy"
+        decoding="async"
+        src="assets/svgs/weed.svg"
+        alt="Weed Eating"
+        width="40"
+        height="40"
+      />
+      <h3 class="cs-h3">Weed Eating</h3>
+      <p class="cs-item-text">
+        Our thorough weed eating service targets and eliminates unwanted growth,
+        ensuring a weed-free outdoor space.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/lawn-2.webp"
+          alt="Weed Eating"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+    <li class="cs-item">
+      <img
+        class="cs-icon"
+        loading="lazy"
+        decoding="async"
+        src="assets/svgs/garden.svg"
+        alt="Edging"
+        width="40"
+        height="40"
+      />
+      <h3 class="cs-h3">Edging</h3>
+      <p class="cs-item-text">
+        Our precise edging service creates clean lines that contribute to a
+        well-maintained, visually stunning landscape.
+      </p>
+      <a href="" class="cs-link">Read More</a>
+      <!--Background Image-->
+      <picture class="cs-background">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/lawn-3.webp"
+          alt="Edging"
+          width="480"
+          height="425"
+        />
+      </picture>
+    </li>
+  </ul>
+  <!--Waves Background-->
+  <picture class="cs-waves">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves-m.svg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
+      alt="waves graphic"
+      width="1920"
+      height="331"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-945">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <!--Long Left Image-->
+      <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="assets/images/about-1.webp"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="assets/images/about-1.webp"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/about-1.webp"
+          alt="hair salon"
+          width="349"
+          height="590"
+        />
+      </picture>
+      <!--Top right image-->
+      <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="assets/images/about-2.webp"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="assets/images/about-2.webp"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/about-2.webp"
+          alt="hair salon"
+          width="281"
+          height="387"
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture3">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="assets/images/about-3.webp"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="assets/images/about-3.webp"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="assets/images/about-3.webp"
+          alt="hair salon"
+          width="281"
+          height="280"
+        />
+      </picture>
+      <!--Seal-->
+      <img
+        class="cs-seal"
+        loading="lazy"
+        decoding="async"
+        src="assets/images/seal.png"
+        alt="Big Time Lawn Seal"
+        width="150"
+        height="150"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">Hair Salon Services</span>
+      <h2 class="cs-title">
+        Life Is More Beautiful When You Meet The Right Hairdresser
+      </h2>
+      <p class="cs-text">
+        The Hair salon Stitch pack is designed specifically for a hairdressers,
+        salons, and beauty centers, with a modern high end feel to match the
+        expectations for design in this industry. These Stitches are great for
+        anything and everything hair and beauty but can also be repurposed for
+        anything high end or luxury.
+      </p>
+      <div class="cs-contact-group">
+        <a class="cs-link" href="mailto:Info@health&wellness.com">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Send A Message</span>
+            <span class="cs-link-content">Info@hairstyle.com</span>
+          </div>
+        </a>
+        <a class="cs-link" href="">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Visit Us At</span>
+            <span class="cs-link-content">123 Fake St, Highland, IN</span>
+          </div>
+        </a>
+      </div>
+      <a href="" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+  </div>
+  <!--Zen Leaf Group-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="assets/images/mower-bg.png"
+    alt="hair tools"
+    width="445"
+    height="310"
+  />
+</section>
+
+{% include 'components/cta.html' %} {% endblock %}
