@@ -11,6 +11,7 @@ eleventyNavigation:
 {% extends "layouts/base.html" %} {% block head %}
 <link rel="stylesheet" href="/assets/css/about.css" />
 {% endblock %} {% block body %}
+
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
@@ -18,15 +19,12 @@ eleventyNavigation:
 <section id="int-hero">
   <h1 id="home-h">About Us</h1>
   <picture>
-    <source
-      media="(max-width: 600px)"
-      srcset="/assets/images/cabinets2-m.jpg"
-    />
-    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg" />
+    <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp" />
+    <source media="(min-width: 601px)" srcset="/assets/images/landing.webp" />
     <img
       aria-hidden="true"
       decoding="async"
-      src="/assets/images/cabinets2.jpg"
+      src="/assets/images/landing.webp"
       alt="kitchen cabinets"
       loading="eager"
       width="2500"
@@ -36,88 +34,151 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                 Side By Side                 -->
+<!--                Side By Side                  -->
 <!-- ============================================ -->
 
-<section id="sbs">
+<section id="sbs-945">
   <div class="cs-container">
-    <!-- Left Image Section -->
-    <div class="cs-left">
+    <div class="cs-image-group">
+      <!--Long Left Image-->
       <picture class="cs-picture cs-picture1">
+        <!--Mobile Image-->
         <source
           media="(max-width: 600px)"
-          srcset="/assets/images/cabinets2-m.jpg"
+          srcset="/assets/images/about-1.webp"
         />
+        <!--Tablet and above Image-->
         <source
           media="(min-width: 601px)"
-          srcset="/assets/images/cabinets2.jpg"
+          srcset="/assets/images/about-1.webp"
         />
         <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/cabinets2.jpg"
-          alt="cabinets"
           loading="lazy"
-          width="400"
-          height="563"
+          decoding="async"
+          src="/assets/images/about-1.webp"
+          alt="hair salon"
+          width="349"
+          height="590"
         />
       </picture>
+      <!--Top right image-->
       <picture class="cs-picture cs-picture2">
+        <!--Mobile Image-->
         <source
           media="(max-width: 600px)"
-          srcset="/assets/images/construction-m.jpg"
+          srcset="/assets/images/about-2.webp"
         />
+        <!--Tablet and above Image-->
         <source
           media="(min-width: 601px)"
-          srcset="/assets/images/construction.jpg"
+          srcset="/assets/images/about-2.webp"
         />
         <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/construction.jpg"
-          alt="house"
           loading="lazy"
-          width="400"
-          height="563"
+          decoding="async"
+          src="/assets/images/about-2.webp"
+          alt="hair salon"
+          width="281"
+          height="387"
         />
       </picture>
-    </div>
-    <!-- Right Content Section-->
-    <div class="cs-right">
-      <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
-      </p>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
-      </p>
-      <div class="cs-flex-group">
-        <p class="cs-flex-p">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
-          consequat tincidunt turpis sit amet imperdiet for mind.
-        </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
+      <!--Bottom right image-->
+      <picture class="cs-picture cs-picture3">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/about-3.webp"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/about-3.webp"
+        />
         <img
-          class="cs-quote-icon"
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-          alt="gavel"
-          width="136"
-          height="77"
+          src="/assets/images/about-3.webp"
+          alt="hair salon"
+          width="281"
+          height="280"
         />
+      </picture>
+      <!--Seal-->
+      <img
+        class="cs-seal"
+        loading="lazy"
+        decoding="async"
+        src="/assets/images/seal.png"
+        alt="Big Time Lawn Seal"
+        width="150"
+        height="150"
+      />
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">About Big Time Lawn</span>
+      <h2 class="cs-title">Rooted in Passion, Grown through Generations</h2>
+      <p class="cs-text">
+        With a combined experience of over 20 years, Big Time Lawn is a
+        family-owned business founded on the principles of hard work and
+        passion. Our journey began when my father started his landscaping
+        business, and I joined him during summer days, sparking a lifelong love
+        for transforming landscapes. Today, we are driven by the joy of serving
+        others and bringing their landscaping dreams to life.
+      </p>
+      <div class="cs-contact-group">
+        <a class="cs-link" href="">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Drop a Line</span>
+            <span class="cs-link-content">(205) 983-2268</span>
+          </div>
+        </a>
+        <a class="cs-link" href="mailto:porter@bigtimelawn.com">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-hair.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Send a Message</span>
+            <span class="cs-link-content">porter@bigtimelawn.com</span>
+          </div>
+        </a>
       </div>
-      <a href="/projects" class="cs-button-solid">Our Projects</a>
+      <a
+        href="/services"
+        class="cs-button-solid"
+        aria-label="learn more about us"
+        >View Our Services</a
+      >
     </div>
   </div>
+  <!--Zen Leaf Group-->
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="/assets/images/mower-bg.png"
+    alt="hair tools"
+    width="445"
+    height="310"
+  />
 </section>
 
 {% include 'components/cta.html' %} {% endblock %}
