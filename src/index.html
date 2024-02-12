@@ -61,7 +61,7 @@ eleventyNavigation:
               Birmingham Areas.
             </p>
           </div>
-          <a href="" class="cs-button-solid">Request Your Free Quote</a>
+          <a href="contact" class="cs-button-solid">Request Your Free Quote</a>
         </div>
       </div>
       <!--We need this wrapper div so we can place the cs-tagline around the cs-picture image. We can only place images inside picture tags so the cs-tagline can't go in there. hence we HAVE to make a div wrapper so they can be placed together-->
@@ -72,16 +72,19 @@ eleventyNavigation:
           <!--Mobile Image-->
           <source
             media="(max-width: 600px)"
-            srcset="assets/images/mower-m.png"
+            srcset="assets/images/mower-m.webp"
             width="360"
             height="425"
           />
           <!--Tablet and above Image-->
-          <source media="(min-width: 601px)" srcset="assets/images/mower.png" />
+          <source
+            media="(min-width: 601px)"
+            srcset="assets/images/mower.webp"
+          />
           <img
             loading="lazy"
             decoding="async"
-            src="assets/images/mower.png"
+            src="assets/images/mower.webp"
             alt="Lawn Mower"
             width="576"
             height="598"
@@ -92,13 +95,13 @@ eleventyNavigation:
   </div>
   <picture class="cs-background">
     <!--Mobile Image-->
-    <source media="(max-width: 600px)" srcset="assets/images/grass-m.jpg" />
+    <source media="(max-width: 600px)" srcset="assets/images/grass-m.webp" />
     <!--Tablet and above Image-->
-    <source media="(min-width: 601px)" srcset="assets/images/grass.jpg" />
+    <source media="(min-width: 601px)" srcset="assets/images/grass.webp" />
     <img
       loading="lazy"
       decoding="async"
-      src="assets/images/grass.jpg"
+      src="assets/images/grass.webp"
       alt="Lowing Landscape"
       width="1920"
       height="804"
@@ -125,7 +128,7 @@ eleventyNavigation:
       <a
         class="cs-button-solid"
         aria-label="read more about our services"
-        href=""
+        href="services"
         >View All Services</a
       >
     </div>
@@ -174,7 +177,7 @@ eleventyNavigation:
         Our mowing service is executed to deliver a lush, well-manicured,
         healthy green lawn that enhances curb appeal.
       </p>
-      <a href="" class="cs-link">Read More</a>
+      <a href="services" class="cs-link">Read More</a>
       <!--Background Image-->
       <picture class="cs-background">
         <img
@@ -202,7 +205,7 @@ eleventyNavigation:
         Our thorough weed eating service targets and eliminates unwanted growth,
         ensuring a weed-free outdoor space.
       </p>
-      <a href="" class="cs-link">Read More</a>
+      <a href="services" class="cs-link">Read More</a>
       <!--Background Image-->
       <picture class="cs-background">
         <img
@@ -230,7 +233,7 @@ eleventyNavigation:
         Our precise edging service creates clean lines that contribute to a
         well-maintained, visually stunning landscape.
       </p>
-      <a href="" class="cs-link">Read More</a>
+      <a href="services" class="cs-link">Read More</a>
       <!--Background Image-->
       <picture class="cs-background">
         <img
@@ -341,7 +344,7 @@ eleventyNavigation:
         class="cs-seal"
         loading="lazy"
         decoding="async"
-        src="assets/images/seal.png"
+        src="assets/images/seal.webp"
         alt="Big Time Lawn Seal"
         width="150"
         height="150"
@@ -359,7 +362,7 @@ eleventyNavigation:
         others and bringing their landscaping dreams to life.
       </p>
       <div class="cs-contact-group">
-        <a class="cs-link" href="">
+        <a class="cs-link" href="tel:+12059832268">
           <picture class="cs-wrapper">
             <img
               class="cs-icon"
@@ -394,7 +397,7 @@ eleventyNavigation:
           </div>
         </a>
       </div>
-      <a href="" class="cs-button-solid" aria-label="learn more about us"
+      <a href="about" class="cs-button-solid" aria-label="learn more about us"
         >Learn More</a
       >
     </div>
@@ -404,7 +407,7 @@ eleventyNavigation:
     class="cs-floater"
     loading="lazy"
     decoding="async"
-    src="assets/images/mower-bg.png"
+    src="assets/images/mower-bg.webp"
     alt="hair tools"
     width="445"
     height="310"
@@ -436,8 +439,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -448,7 +451,7 @@ eleventyNavigation:
           Installation service, providing a protective and visually pleasing
           layer that promotes plant health.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -467,8 +470,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -479,7 +482,7 @@ eleventyNavigation:
           Sod Installation services, expertly tailored to add greenery,
           structure, and vitality to your lawn.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -498,8 +501,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -510,7 +513,7 @@ eleventyNavigation:
           service that facilitates better air and nutrient absorption, resulting
           in a lush, thriving turf.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -529,8 +532,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -541,7 +544,7 @@ eleventyNavigation:
           Fence Installation service, combining functionality and style to
           complement your landscape.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -560,8 +563,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -572,7 +575,7 @@ eleventyNavigation:
           service, expertly removing obstacles and creating a clean canvas for
           your landscaping vision.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -591,8 +594,8 @@ eleventyNavigation:
             class="cs-icon"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
+            src="assets/svgs/trees.svg"
+            alt="Trees"
             width="40"
             height="40"
           />
@@ -603,7 +606,7 @@ eleventyNavigation:
           service that rejuvenates and fortifies your lawn, ensuring
           long-lasting health and vibrancy.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="services" class="cs-link">Read More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
@@ -620,18 +623,12 @@ eleventyNavigation:
   </div>
   <!--Waves Background-->
   <picture class="cs-waves">
-    <source
-      media="(max-width: 600px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves-m.svg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
-    />
+    <source media="(max-width: 600px)" srcset="assets/svgs/waves-m.svg" />
+    <source media="(min-width: 601px)" srcset="assets/svgs/waves.svg" />
     <img
       loading="lazy"
       decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
+      src="assets/svgs/waves.svg"
       alt="waves graphic"
       width="1920"
       height="331"
@@ -788,7 +785,7 @@ eleventyNavigation:
         </picture>
       </li>
     </ul>
-    <a href="" class="cs-button-solid">View Full Gallery</a>
+    <a href="gallery" class="cs-button-solid">View Full Gallery</a>
   </div>
 </section>
 
@@ -816,7 +813,7 @@ eleventyNavigation:
           <picture class="cs-icon-wrapper">
             <img
               class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chat-gold.svg"
+              src="assets/svgs/bell.svg"
               loading="lazy"
               decoding="async"
               alt="icon"
@@ -839,7 +836,7 @@ eleventyNavigation:
           <picture class="cs-icon-wrapper">
             <img
               class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/call-gold.svg"
+              src="assets/svgs/chat.svg"
               loading="lazy"
               decoding="async"
               alt="icon"
@@ -863,7 +860,7 @@ eleventyNavigation:
           <picture class="cs-icon-wrapper">
             <img
               class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/money-gold.svg"
+              src="assets/svgs/target.svg"
               loading="lazy"
               decoding="async"
               alt="icon"
@@ -1082,7 +1079,7 @@ eleventyNavigation:
           </div>
         </li>
         <div class="cs-content">
-          <a href="" class="cs-button-solid">Request a Quote</a>
+          <a href="contact" class="cs-button-solid">Request a Quote</a>
         </div>
       </ul>
     </div>
@@ -1110,7 +1107,7 @@ eleventyNavigation:
           <picture class="cs-picture" aria-hidden="true">
             <img
               class="cs-profile"
-              src="assets/images/reviews-1.jpg"
+              src="assets/images/reviews-1.webp"
               decoding="async"
               alt="profile"
               width="50"
@@ -1145,7 +1142,7 @@ eleventyNavigation:
           <picture class="cs-picture" aria-hidden="true">
             <img
               class="cs-profile"
-              src="assets/images/reviews-2.jpg"
+              src="assets/images/reviews-2.webp"
               decoding="async"
               alt="profile"
               width="50"
@@ -1179,7 +1176,7 @@ eleventyNavigation:
           <picture class="cs-picture" aria-hidden="true">
             <img
               class="cs-profile"
-              src="assets/images/reviews-3.jpg"
+              src="assets/images/reviews-3.webp"
               decoding="async"
               alt="profile"
               width="50"
@@ -1349,7 +1346,7 @@ eleventyNavigation:
         the peace of mind that comes with transparent and flexible pricing
         options tailored to your needs.
       </p>
-      <a href="" class="cs-button-solid">View Our Services</a>
+      <a href="services" class="cs-button-solid">View Our Services</a>
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">
@@ -1382,7 +1379,7 @@ eleventyNavigation:
           <li class="cs-li">Annual Top Dressings</li>
           <li class="cs-li"><em>And More!</em></li>
         </ul>
-        <a href="" class="cs-button-transparent">Request a Quote</a>
+        <a href="contact" class="cs-button-transparent">Request a Quote</a>
       </li>
     </ul>
   </div>
