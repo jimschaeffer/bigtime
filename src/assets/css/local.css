@@ -162,7 +162,7 @@
     /* 24px - 64px top & bottom */
     /* 24px - 40px left & right */
     padding: clamp(1.5rem, 6vw, 4rem) clamp(1.5rem, 6vw, 2.5rem);
-    background-color: #f7f3ee;
+    background-color: #fbf8f6;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     grid-column: span 12;
@@ -664,7 +664,7 @@
     /* 24px - 64px bottom */
     /* 24px - 40px left & right */
     padding: 0 clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 6vw, 4rem);
-    background-color: #f7f3ee;
+    background-color: #fbf8f6;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     grid-column: span 12;
@@ -1099,7 +1099,7 @@
     margin-top: -2.375em;
     margin-left: 1.5em;
     padding: 1em;
-    background-color: #f7f7f7;
+    background-color: #fbf8f6;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
