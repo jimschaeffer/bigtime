@@ -35,10 +35,6 @@ eleventyNavigation:
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap"
-  rel="stylesheet"
-/>
 
 <!-- ============================================ -->
 <!--                   Hero                       -->
@@ -82,7 +78,6 @@ eleventyNavigation:
             srcset="assets/images/mower.webp"
           />
           <img
-            loading="lazy"
             decoding="async"
             src="assets/images/mower.webp"
             alt="Lawn Mower"
@@ -147,12 +142,12 @@ eleventyNavigation:
           aria-hidden="true"
         />
       </picture>
-      <a class="cs-play" href="#" alt="Play Button">
+      <a class="cs-play" href="#" alt="Play Button" aria-label="Play Button">
         <img
           class="cs-play-icon"
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-white.svg"
+          src="assets/svgs/play-white.svg"
           alt="play link"
           width="24"
           height="24"
@@ -249,18 +244,12 @@ eleventyNavigation:
   </ul>
   <!--Waves Background-->
   <picture class="cs-waves">
-    <source
-      media="(max-width: 600px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves-m.svg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
-    />
+    <source media="(max-width: 600px)" srcset="assets/svgs/waves-m.svg" />
+    <source media="(min-width: 601px)" srcset="assets/svgs/waves.svg" />
     <img
       loading="lazy"
       decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg"
+      src="assets/svgs/waves.svg"
       alt="waves graphic"
       width="1920"
       height="331"
@@ -368,7 +357,7 @@ eleventyNavigation:
               class="cs-icon"
               loading="lazy"
               decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-hair.svg"
+              src="assets/svgs/pin.svg"
               alt="icon"
               width="24"
               height="24"
@@ -385,7 +374,7 @@ eleventyNavigation:
               class="cs-icon"
               loading="lazy"
               decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-hair.svg"
+              src="assets/svgs/email.svg"
               alt="icon"
               width="24"
               height="24"
@@ -1078,9 +1067,11 @@ eleventyNavigation:
             </p>
           </div>
         </li>
-        <div class="cs-content">
-          <a href="contact" class="cs-button-solid">Request a Quote</a>
-        </div>
+        <li class="cs-wrapper">
+          <div class="cs-content">
+            <a href="contact" class="cs-button-solid">Request a Quote</a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

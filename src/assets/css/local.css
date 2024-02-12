@@ -52,7 +52,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 2rem;
-    background-color: var(--primary);
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -213,7 +213,7 @@
     font-weight: bold;
     margin: 0;
     padding: 0;
-    color: var(--primary);
+    color: var(--primaryDark);
     position: relative;
     transition: color 0.3s;
   }
@@ -383,7 +383,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 2rem;
-    background-color: var(--primary);
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -726,7 +726,7 @@
     font-weight: bold;
     margin: 0;
     padding: 0;
-    color: var(--primary);
+    color: var(--primaryDark);
     position: relative;
     transition: color 0.3s;
   }
@@ -909,8 +909,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--primary);
-    border-radius: 0.25rem;
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -927,7 +926,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 0.25rem;
     transition: width 0.3s;
   }
   #gallery-47 .cs-button-solid:hover:before {
@@ -1462,7 +1460,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 2rem;
-    background-color: var(--primary);
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -2030,7 +2028,7 @@
     color: #fff;
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--primary);
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -2170,11 +2168,11 @@
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: var(--primary);
+    color: var(--primaryDark);
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;

@@ -7,6 +7,7 @@
 @media only screen and (min-width: 0em) {
   :root {
     --primary: #26b249;
+    --primaryDark: #1c8436;
     --primaryLight: #9eeab1;
     --secondary: #012939;
     --secondaryLight: #012939;
@@ -38,7 +39,7 @@
     text-align: inherit;
     letter-spacing: 0.1em;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primaryDark);
     margin-bottom: 0.25rem;
     display: block;
   }
@@ -73,7 +74,7 @@
     width: auto;
     padding: 0 1.875rem;
     color: #000;
-    background-color: var(--primary);
+    background-color: var(--primaryDark);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -126,41 +127,13 @@
     font-weight: 700;
     src: url("/assets/fonts/nunito-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  /* roboto-regular - latin */
+  /* mr-dafoe-regular - latin */
   @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Mr Dafoe";
     font-style: normal;
-    font-family: "Roboto";
     font-weight: 400;
-    font-display: swap;
-    src: local(""),
-      url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-700 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-display: swap;
-    src: local(""),
-      url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-900 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-display: swap;
-    src: local(""),
-      url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url("/assets/fonts/mr-dafoe-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* montserrat-regular - latin */
   @font-face {
@@ -815,7 +788,7 @@ html {
       min-width: (150/16rem);
       padding: 0 (32/16rem);
       background-color: transparent;
-      border: 1px solid var(--primary);
+      border: 1px solid var(--primaryDark);
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -977,7 +950,7 @@ html {
     }
 
     .cs-topper {
-      color: var(--primary);
+      color: var(--primaryDark);
     }
 
     .cs-title {
@@ -1044,7 +1017,7 @@ html {
       width: (60/16rem);
       height: (60/16rem);
       margin: 0;
-      border: 1px solid var(--secondary);
+      border: 1px solid var(--primary);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -1122,7 +1095,7 @@ html {
       color: #fff;
       min-width: (150/16rem);
       padding: 0 (24/16rem);
-      background-color: var(--primary);
+      background-color: var(--primaryDark);
       display: inline-block;
       position: relative;
       z-index: 1;
