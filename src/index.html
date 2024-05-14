@@ -62,7 +62,29 @@ eleventyNavigation:
       </div>
       <!--We need this wrapper div so we can place the cs-tagline around the cs-picture image. We can only place images inside picture tags so the cs-tagline can't go in there. hence we HAVE to make a div wrapper so they can be placed together-->
       <div class="cs-picture-group">
-        <span class="cs-tagline">Flexible Pricing!</span>
+        <!-- <span class="cs-tagline">Flexible Pricing!</span> -->
+        <span class="cs-tagline"
+          ><picture class="cs-picture-2">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="assets/images/best-of-the-best.webp"
+              width="320"
+              height="320"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="assets/images/best-of-the-best.webp"
+            />
+            <img
+              decoding="async"
+              src="assets/images/best-of-the-best.webp"
+              alt="Shelby County Best of the Best"
+              width="320"
+              height="320"
+            /> </picture
+        ></span>
         <!-- Lawn Mower Picture-->
         <picture class="cs-picture">
           <!--Mobile Image-->
