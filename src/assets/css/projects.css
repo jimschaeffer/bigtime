@@ -16,7 +16,10 @@
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    row-gap: clamp(1rem, 1vw, 1rem);
+    /* Top and Bottom */
+    column-gap: clamp(3rem, 6vw, 4rem);
+    /* Right and Left */
   }
   #gallery-47 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -26,6 +29,7 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
+    margin-bottom: 1rem;
   }
   #gallery-47 .cs-image-group {
     width: 100%;
