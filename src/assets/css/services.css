@@ -127,7 +127,6 @@
   #content-page-714 .cs-picture {
     width: 33.875em;
     height: 40.4375em;
-    border-radius: 17.8125em;
     border: 0.75em solid #fff;
     background-color: #f7f7f7;
     /* prevents border from affecting height and width */
@@ -157,14 +156,6 @@
     right: -3em;
     z-index: -1;
     transform: rotate(142deg);
-  }
-  #content-page-714 .cs-sense {
-    width: 5em;
-    height: auto;
-    position: absolute;
-    top: -0.25em;
-    left: 0.625em;
-    transform: rotate(90deg);
   }
   #content-page-714 .cs-background {
     display: none;
@@ -253,9 +244,6 @@
   }
   body.dark-mode #content-page-714 .cs-flower {
     filter: brightness(50%);
-  }
-  body.dark-mode #content-page-714 .cs-sense {
-    filter: brightness(150%);
   }
   body.dark-mode #content-page-714 .cs-background {
     background-color: var(--medium);

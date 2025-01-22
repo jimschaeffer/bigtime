@@ -106,34 +106,34 @@ eleventyNavigation:
           
           <h4>Gallery of Our Work</h4>
           <p>
-              See the difference our landscaping services can make! Browse our <a href="/gallery">gallery</a> to view stunning transformations and get inspired for your project.
+              See the difference our landscaping services can make! <a href="/gallery">Browse our gallery</a> to view stunning transformations and get inspired for your project.
           </p>
           
           <h4>Contact Us Today for Your Free Landscaping Quote</h4>
           <p>
-              Ready to transform your outdoor space? Contact Big Time Lawn today to schedule a consultation and receive a free quote. Let’s create the landscape of your dreams!
+              Ready to transform your outdoor space? <a href="/contact">Contact Big Time Lawn today</a> to schedule a consultation and receive a free quote. Let’s create the landscape of your dreams!
           </p>
       </div>
       
       <div class="cs-image-group">
           <picture class="cs-picture">
               <!-- Mobile Image -->
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FProjects%2Fgarden-design.jpg">
+              <source media="(max-width: 600px)" srcset="/assets/images/services-landscaping.webp">
               <!-- Tablet and Above Image -->
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FProjects%2Fgarden-design.jpg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FProjects%2Fgarden-design.jpg" alt="Beautiful garden bed design" width="570" height="680" aria-hidden="true">
+              <source media="(min-width: 601px)" srcset="/assets/images/services-landscaping.webp">
+              <img loading="lazy" decoding="async" src="/assets/images/services-landscaping.webp" alt="Beautiful garden bed design" width="570" height="680" aria-hidden="true">
           </picture>
 
           <!-- Flower Graphic -->
-          <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true">
+          <img class="cs-flower" loading="lazy" decoding="async" src="/assets/svgs/flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true">
 
-          <!-- Spidey Sense Graphic -->
-          <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
       </div>
   </div>
   
   <!-- Waves Graphic -->
   <picture class="cs-background">
-      <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg" alt="waves" decoding="async" aria-hidden="true" width="625" height="952">
+      <img src="/assets/svgs/large-waves.svg" alt="waves" decoding="async" aria-hidden="true" width="625" height="952">
   </picture>
 </section>
+
+{% include 'components/cta.html' %} {% endblock %}
