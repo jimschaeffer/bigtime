@@ -27,29 +27,26 @@
       <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-          {% set navPages = collections.all | eleventyNavigation %} {# Loop
-          through all pages with a eleventyNavigation in the frontmatter #} {%
-          for entry in navPages %} {# Define a hasChild variable to make it
-          easier to test what links are dropdowns#} {% set hasChild =
-          entry.children.length %} {# If this page is a dropdown, give it the
-          appropriate classes, icons and accessibility attributes#}
-          <li
-            class="cs-li {% if hasChild %} cs-dropdown {% endif %}"
-            {%
-            if
-            hasChild
-            %}
-            tabindex="0"
-            {%
-            endif
-            %}
-          >
-            {# Similarly, if the link is active, apply the necessary classes #}
+          <li class="cs-li">
             <a
-              href="{{ entry.url }}"
-              class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}"
+              href="/"
+              class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}"
             >
-              {{ entry.key }} {% if hasChild %}
+              Home
+            </a>
+          </li>
+          <li class="cs-li">
+            <a
+              href="/about"
+              class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}"
+            >
+              About
+            </a>
+          </li>
+          <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Services
               <img
                 class="cs-drop-icon"
                 src="/assets/svgs/down.svg"
@@ -59,23 +56,120 @@
                 decoding="async"
                 aria-hidden="true"
               />
-              {% endif %}
-            </a>
-
-            {# Dropdowns have another ul/li set up within the parent li. Render
-            in the same way as a normal link #} {% if hasChild %}
+            </span>
             <ul class="cs-drop-ul">
-              {% for child in entry.children %}
               <li class="cs-drop-li">
-                <a href="{{ child.url }}" class="cs-li-link cs-drop-link"
-                  >{{ child.key }}</a
+                <a href="/landscaping" class="cs-li-link cs-drop-link"
+                  >Landscaping</a
                 >
               </li>
-              {% endfor %}
+              <li class="cs-drop-li">
+                <a href="/maintenance" class="cs-li-link cs-drop-link"
+                  >Maintenance</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/sod-installation" class="cs-li-link cs-drop-link"
+                  >Sod Installation</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/mulch-and-pinestraw" class="cs-li-link cs-drop-link"
+                  >Mulch & Pinestraw</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/landscape-lighting" class="cs-li-link cs-drop-link"
+                  >Landscape Lighting</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/grading-and-drainage" class="cs-li-link cs-drop-link"
+                  >Grading & Drainage</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/irrigation" class="cs-li-link cs-drop-link"
+                  >Irrigation</a
+                >
+              </li>
             </ul>
-            {% endif %}
           </li>
-          {% endfor %}
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Locations
+              <img
+                class="cs-drop-icon"
+                src="/assets/svgs/down.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="/hoover" class="cs-li-link cs-drop-link">Hoover</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="/mountain-brook" class="cs-li-link cs-drop-link"
+                  >Mountain Brook</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/homewood" class="cs-li-link cs-drop-link">Homewood</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="/vestavia-hills" class="cs-li-link cs-drop-link"
+                  >Vestavia Hills</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/indian-springs" class="cs-li-link cs-drop-link"
+                  >Indian Springs</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/meadowbrook" class="cs-li-link cs-drop-link"
+                  >Meadowbrook</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/helena" class="cs-li-link cs-drop-link">Helena</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="/pelham" class="cs-li-link cs-drop-link">Pelham</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="/alabaster" class="cs-li-link cs-drop-link"
+                  >Alabaster</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="/calera" class="cs-li-link cs-drop-link">Calera</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="/chelsea" class="cs-li-link cs-drop-link">Chelsea</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li">
+            <a
+              href="/gallery"
+              class="cs-li-link {% if page.url == '/gallery/' %} cs-active {% endif %}"
+            >
+              Gallery
+            </a>
+          </li>
+          <li class="cs-li">
+            <a
+              href="/reviews"
+              class="cs-li-link {% if page.url == '/reviews/' %} cs-active {% endif %}"
+            >
+              Reviews
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
