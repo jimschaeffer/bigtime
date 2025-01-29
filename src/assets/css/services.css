@@ -242,9 +242,6 @@
     border-color: var(--dark);
     background-color: var(--dark);
   }
-  body.dark-mode #content-page-714 .cs-flower {
-    filter: brightness(50%);
-  }
   body.dark-mode #content-page-714 .cs-background {
     background-color: var(--medium);
     filter: brightness(70%);
