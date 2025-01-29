@@ -663,6 +663,235 @@
 }
 
 /*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-2196 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      opacity: 0.03;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .cs-container {
+      width: 100%;
+      max-width: (1280/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cs-card-group {
+      width: 100%;
+      max-width: (400/16rem);
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: (24/16rem);
+    }
+
+    .cs-item {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      grid-column: span 12;
+      gap: (16/16rem);
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+
+        .cs-link {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .cs-name {
+          color: var(--primary);
+        }
+
+        .cs-picture {
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        .cs-picture img {
+          transform: scale(1.15);
+        }
+      }
+    }
+
+    .cs-image-group {
+      width: 100%;
+      /* 280px - 320px */
+      height: clamp(17.5rem, 35vw, 20rem);
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cs-picture {
+      width: 100%;
+      height: 100%;
+      /* clips img tag from overflowing it on hover */
+      overflow: hidden;
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.72) 14.59%,
+          rgba(0, 0, 0, 0) 43.18%
+        );
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+        z-index: -1;
+        transition: transform 0.6s;
+      }
+    }
+
+    .cs-social {
+      display: flex;
+      align-items: flex-start;
+      gap: (16/16rem);
+      position: absolute;
+      bottom: (16/16rem);
+    }
+
+    .cs-link {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: (8/16rem);
+      z-index: 1;
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translateY(1rem);
+
+      &:nth-of-type(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-of-type(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-of-type(4) {
+        transition-delay: 0.3s;
+      }
+    }
+
+    .cs-link-icon {
+      width: (20/16rem);
+      height: auto;
+    }
+
+    .cs-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: (4/16rem);
+    }
+
+    .cs-job {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      color: var(--bodyTextColor);
+      display: block;
+    }
+
+    .cs-name {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      margin: 0;
+      color: var(--headerColor);
+      display: block;
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-2196 {
+    .cs-card-group {
+      max-width: none;
+      /* 16px - 20px */
+      column-gap: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    .cs-item {
+      grid-column: span 3;
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    #meet-team-2196 {
+      background-color: rgba(0, 0, 0, 0.2);
+
+      .cs-title,
+      .cs-name,
+      .cs-job {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text,
+      .cs-job {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+/*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
 
