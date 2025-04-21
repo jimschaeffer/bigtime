@@ -55,7 +55,7 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Preloads -->
-    <link rel="preload" as="image" href="/assets/images/logo.png" />
+    <link rel="preload" as="image" href="/assets/svgs/logo.svg" />
     <link
       rel="preload"
       as="font"
@@ -97,14 +97,19 @@
       | {{ client.name }} {% endif %}
     </title>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C1G168LTX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5C1G168LTX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-5C1G168LTX');
-</script>
+      gtag("config", "G-5C1G168LTX");
+    </script>
   </head>
   <body>
     <!--Screen reader skip main nav-->
